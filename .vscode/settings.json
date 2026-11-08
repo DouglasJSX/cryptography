@@ -1,0 +1,20 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:LOCALAPPDATA}\\Programs\\w64devkit\\bin;${env:PATH}"
+    },
+    "C_Cpp.default.compilerPath": "${env:LOCALAPPDATA}/Programs/w64devkit/bin/gcc.exe",
+    "C_Cpp.default.cStandard": "c11",
+    "c-cpp-compile-run.c-compiler": "C:\\Users\\dmarc\\AppData\\Local\\Programs\\w64devkit\\bin\\gcc.exe",
+    "c-cpp-compile-run.c-flags": "-std=c11 -Wall -Wextra -g",
+    "c-cpp-compile-run.c-linker-flags": "sha256.c",
+    "c-cpp-compile-run.output-location": "output",
+    "c-cpp-compile-run.skip-if-compiled": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.ignoreSelection": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.executorMap": {
+        "c": "& \"$env:LOCALAPPDATA\\Programs\\w64devkit\\bin\\gcc.exe\" -std=c11 -Wall -Wextra main.c sha256.c -o sha256.exe; if ($LASTEXITCODE -eq 0) { .\\sha256.exe }"
+    }
+}
